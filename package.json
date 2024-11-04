@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rd /s /q C:\\Users\\Käyttäjä\\Desktop\\fullstack\\fullstackOsa3\\dist && cd C:\\Users\\Käyttäjä\\Desktop\\fullstack\\fullstackopen\\osa2\\puhelinluettelo && npm run build && xcopy /E /I dist C:\\Users\\Käyttäjä\\Desktop\\fullstack\\fullstackOsa3\\dist",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "\"Daniel\"",
   "license": "ISC",
